@@ -20,7 +20,8 @@ function displayResults(responseJson) {
 }
 
 function watchForm() {
-  $("form").on(click => {
+  $("form").submit(event => {
+    event.preventDefault();
     console.log("watchForm ran");
     getDogImages();
   });
